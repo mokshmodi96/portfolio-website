@@ -6,11 +6,11 @@ import SideBar from "../components/SideBar.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
-const { image, title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+const { image, title = SITE_TITLE, description = SITE_DESCRIPTION,theme='black' } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="lofi">
+<html lang="en" data-theme={theme}>
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
@@ -20,7 +20,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.prop
       <div class="drawer-content flex flex-col bg-base-100">
         <Header title={SITE_TITLE} />
         <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 max-w-[900px]">
+          <main class="p-6 pt-10 lg:pt-0 max-w-[900px]">
             <slot />
           </main>
         </div>
