@@ -21,7 +21,7 @@ jobs:
       - name: Deploy via SSH
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
-            cd /portfolio-website
+            cd /root/portfolio-website
             git pull origin main
             npm install
             npm run build
