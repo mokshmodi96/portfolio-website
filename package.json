@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "serve -l 5000 dist/",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -18,8 +17,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.11.0",
     "daisyui": "^4.6.0",
-    "dayjs": "^1.11.9",
-    "serve": "^14.2.1"
+    "dayjs": "^1.11.9"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
