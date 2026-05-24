@@ -17,7 +17,8 @@
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^6.3.7",
     "daisyui": "^5.5.20",
-    "dayjs": "^1.11.20"
+    "dayjs": "^1.11.20",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
