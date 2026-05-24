@@ -3,84 +3,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title = "Resume">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div>
-
-  <div class="mb-10 text-justify">
-    Studied Diploma and Bachelors in Information Technology from Gujarat Technological University, India. With almost 2 Years of
-    professional experience in developing software with Javascript and Typescript. Currently, working as React Native Developer at
-    Splice Global International Private Limited.
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Diploma in Information Technology"
-      subtitle="2016 to 2019 at Dr. S & SS Ghandhy College, Surat, India"
-    />
-    <TimeLineElement
-      title="Bachelor in Information Technology"
-      subtitle="2019 to 2022 at Saravajanik College of Eng. and Tech., Surat, India"
-    />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Full Stack Javascript Intern"
-      subtitle="From February, 2021 to October, 2021 at Propelius Technologies, Surat, India"
-      desc="System multiplatform that includes the steps of a company's personnel, the structure and composition thereof, as well as a powerful designer of credentials and module of control of access. Outspread at the MINFAR and another entities of the country. Technologies: C++, Qt Framework, Subversión, Visual Paradigm, PostgreSQL, Jmeter"
-    />
-    <TimeLineElement
-      title="Full Stack JS Developer"
-      subtitle="From January, 2022 to June, 2022 at Gripphy LLP., Surat, India"
-      desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.7 , Subversión, PostgreSQL, HigthChart, Ireport, Boostrap 2, JQuery, HTML,CSS, JavaScript"
-    />
-    <TimeLineElement
-      title="React Native Mobile Application Developer"
-      subtitle="From August, 2022 at Splice Global International Private LTD."
-      desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.8 , Gitlab, PostgreSQL, HigthChart, Boostrap 2, JQuery, HTML,CSS, JavaScript"
-    />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <p>IELTS 7.5 Bands Overall</p>
-    </li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>English</li>
-    <li>JavaScript</li>
-    <li>Typescript</li>
-    <li>React</li>
-    <li>React Native</li>
-    <li>Postgres SQL</li>
-    <li>MySQL</li>
-    <li>CSS</li>
-    <li>HTML</li>
-    <li>Node.js</li>
-    <li>Astro</li>
-    <li>Taildwind</li>
-    <li>Wordpress</li>
-    <li>Git</li>
-    <li>Jira</li>
-    <li>Scrum</li>
-  </ul>
+<BaseLayout title="Resume">
+  <section class="section">
+    <h1>Experience</h1>
+    <div class="time-line-container">
+      <TimeLineElement
+        title="Full Stack Javascript Intern"
+        subtitle="From February, 2021 to October, 2021 at Propelius Technologies, Surat, India"
+        desc="System multiplatform that includes the steps of a company's personnel, the structure and composition thereof, as well as a powerful designer of credentials and module of control of access. Outspread at the MINFAR and another entities of the country. Technologies: C++, Qt Framework, Subversión, Visual Paradigm, PostgreSQL, Jmeter"
+      />
+      <TimeLineElement
+        title="Full Stack JS Developer"
+        subtitle="From January, 2022 to June, 2022 at Gripphy LLP., Surat, India"
+        desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.7 , Subversión, PostgreSQL, HigthChart, Ireport, Boostrap 2, JQuery, HTML,CSS, JavaScript"
+      />
+      <TimeLineElement
+        title="React Native Mobile Application Developer"
+        subtitle="From August, 2022 at Splice Global International Private LTD."
+        desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.8 , Gitlab, PostgreSQL, HigthChart, Boostrap 2, JQuery, HTML,CSS, JavaScript"
+      />
+    </div>
+  </section>
 </BaseLayout>

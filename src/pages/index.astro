@@ -1,79 +1,70 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
-import DefaultImg from "../assets/post_img.webp";
-import { getCollection } from "astro:content";
-
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
-
-const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout>
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Moksh Modi</div>
-    <div class="text-3xl py-3 font-bold">Full Stack Software Developer</div>
-    <div class="py-2">
-      <text class="text-lg">
-        Highly skilled software development professional bringing enormous
-        talents for software design, development and integration. Offering
-        advanced knowledge of in-demand programming languages.
-      </text>
+  <section class="hero">
+    <p class="eyebrow">Hey, I'm Moksh.</p>
+    <h1>I build web and mobile products with a focus on clarity and speed.</h1>
+    <p class="lead">
+      Currently exploring product design, AI tooling, and developer experience.
+      Based in India and open to thoughtful collaborations.
+    </p>
+    <div class="hero-actions">
+      <a class="link" href="mailto:mokshmodi96@gmail.com">Say hi</a>
+      <a class="link muted" href="/projects">View projects</a>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="mailto:mokshmodi96@gmail.com" target="_blank">
-        Let's connect!</a
-      >
+  </section>
+
+  <section class="section">
+    <h2>Now</h2>
+    <ul class="list">
+      <li>Building full-stack products and design systems.</li>
+      <li>Experimenting with AI-driven workflows and agents.</li>
+      <li>Sharpening systems design and architecture skills.</li>
+      <li>Shipping small, useful tools when time allows.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Featured</h2>
+    <div class="stack">
+      <a class="card" href="/projects">
+        <span class="card-title">Signal Board</span>
+        <span class="card-meta">Product</span>
+        <p class="card-desc">A minimalist status dashboard for teams.</p>
+      </a>
+      <a class="card" href="/projects">
+        <span class="card-title">Pulse</span>
+        <span class="card-meta">Project</span>
+        <p class="card-desc">An AI-assisted habit tracker with daily prompts.</p>
+      </a>
+      <a class="card" href="/blog/">
+        <span class="card-title">Hello World</span>
+        <span class="card-meta">Post</span>
+        <p class="card-desc">Starting the writing habit with short notes.</p>
+      </a>
     </div>
-  </div>
+  </section>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
-  </div>
-
-  <HorizontalCard
-    title="Demo Project 1"
-    img={DefaultImg}
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img={DefaultImg}
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img={DefaultImg}
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + post.slug}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+  <section class="section">
+    <div class="section-row">
+      <h2>Recent Writing</h2>
+      <a class="link muted" href="/blog/">View all →</a>
+    </div>
+    <div class="stack">
+      <a class="card" href="/blog/">
+        <span class="card-title">Testing notes</span>
+        <span class="card-meta">Jan 2024</span>
+        <p class="card-desc">
+          Quick thoughts and work-in-progress updates from current projects.
+        </p>
+      </a>
+      <a class="card" href="/blog/">
+        <span class="card-title">Hello World</span>
+        <span class="card-meta">Jun 2023</span>
+        <p class="card-desc">First post on the blog.</p>
+      </a>
+    </div>
+  </section>
 </BaseLayout>

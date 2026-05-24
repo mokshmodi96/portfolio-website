@@ -11,17 +11,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
-    "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.1",
+    "@astrojs/mdx": "^5.0.6",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^5.11.0",
-    "daisyui": "^4.6.0",
-    "dayjs": "^1.11.9"
+    "astro": "^6.3.7",
+    "daisyui": "^5.5.20",
+    "dayjs": "^1.11.20"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "prettier": "^3.6.2",
-    "prettier-plugin-astro": "^0.14.1"
-  }
+    "@tailwindcss/typography": "^0.5.19",
+    "prettier": "^3.8.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^3.4.19"
+  },
+  "packageManager": "pnpm@11.3.0"
 }

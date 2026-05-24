@@ -1,38 +1,35 @@
 ---
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
+
+const cardClass = img ? "card card-row" : "card card-row no-media";
 ---
 
-<div
-    class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
->
-  <a href={url} target={target}>
-    <div class="hero-content flex-col md:flex-row">
-      {
-          img && (
-              <Image
-                  src={img}
-                  width={750}
-                  height={500}
-                  format="webp"
-                  alt={title}
-                  class="max-w-full md:max-w-[13rem] rounded-lg"
-              />
-          )
-      }
-      <div class="grow w-full">
-        <h1 class="text-xl font-bold">
-          {title}
-          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
-        </h1>
-        <p class="py-1 text-1xl">{desc}</p>
-        <div class="card-actions justify-end">
-          {
-              tags &&
-              tags.map((tag) => <div class="badge badge-outline">{tag}</div>)
-          }
-        </div>
-      </div>
+<a class={cardClass} href={url} target={target}>
+  {img && (
+    <div class="card-media">
+      <Image
+        src={img}
+        width={320}
+        height={320}
+        format="webp"
+        alt={title}
+        class="card-image"
+      />
     </div>
-  </a>
-</div>
+  )}
+  <div class="card-body">
+    <div class="card-heading">
+      <span class="card-title">{title}</span>
+      {badge && <span class="card-badge">{badge}</span>}
+    </div>
+    {desc && <p class="card-desc">{desc}</p>}
+    {tags && (
+      <div class="card-tags">
+        {tags.map((tag) => (
+          <span class="card-tag">{tag}</span>
+        ))}
+      </div>
+    )}
+  </div>
+</a>

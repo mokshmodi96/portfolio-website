@@ -1,0 +1,7 @@
+---
+const { ariaLabel = "Content list" } = Astro.props;
+---
+
+<div class="card-list" aria-label={ariaLabel}>
+  <slot />
+</div>
